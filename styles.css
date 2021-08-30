@@ -1,0 +1,431 @@
+
+/* ----------------------------------------------------- */
+/*                     FEUILLE DE STYLES                 */
+/* 		Devoir n°2 : Se perfectionner en HTML - CSS		 */
+/* ----------------------------------------------------- */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ----------------------------------------------------- */
+/*                       GENERAL                         */
+/* ----------------------------------------------------- */
+
+body {
+    font-family: verdana, sans-serif;
+    background-image: url(img/bkgd_page.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f6f6f6;
+    font-size: 14px;
+    color: #2F2F2F;
+}
+
+#wrapper {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+	/*overflow: hidden;*/
+}
+
+
+/* ----------------------------------------------------- */
+/*                        HEADER                         */
+/* ----------------------------------------------------- */
+
+#header-main {
+	margin-top: 60px;
+}
+
+/* ------------ MENU PRINCIPAL ---------------*/
+
+#header_menu {
+	position: relative;
+}
+
+#main-nav {
+	border: 1px dashed #fff;
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+}
+
+#main-nav ul, #main-nav li {
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav ul {
+    text-align: center;
+    display: flex;
+}
+
+#main-nav li {
+    display: block;
+    padding: 5px 0px;
+    border-right: 1px dashed #fff;
+    font-size: 17px;
+}
+
+/* enlever la dernière bordure */
+#main-nav li:nth-child(5) {
+	border-right: 0px solid #000;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 17px;
+}
+
+#main-nav a:hover {
+    color: #305a47;
+    background-color: #fff;
+}
+
+/* ------------ TITRES HEADER ---------------*/
+
+#header_titre {
+	min-height: 200px;
+	color: #fff;
+	text-align: center;
+}
+
+#header_titre h1 {
+	margin-top: 100px;
+	font-size: 65px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#header_titre h2 {
+	font-size: 37px;
+	font-family:  Times New Roman, serif;
+	margin-bottom: 10px;
+}
+
+#slogan {
+	font-size: 18px;
+	font-family:  Times New Roman, serif;
+}
+
+/* ----------------------------------------------------- */
+/*                         MAIN                          */
+/* ----------------------------------------------------- */
+
+main {
+	background-color: #f6f6f6;
+	padding: 20px;
+}
+
+.bloc {
+	margin: 40px 0 80px 0;
+}
+
+ /* ------------ PARTIE 1 - ARTICLES ---------------*/
+
+/* Partie de gauche */
+
+.articles {
+	margin-bottom: 30px;
+}
+
+.articles p {
+	margin: 4px 0;
+}
+
+#actualites {
+	width: 680px;
+	float: left;
+}
+
+#actualites h1 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.img_article {
+	float: left;
+	margin-right: 15px;
+	border: 1px solid #000;
+}
+
+.img_article:hover {
+	opacity: 0.6;
+}
+
+.auteur {
+	color: #38b4b4;
+}
+
+.date {
+	color: #aaa;
+	font-style: italic;
+}
+
+/* Partie de droite */
+
+aside {
+	width: 300px;
+	float: right;
+	text-align: center;
+}
+
+.rapport_annuel {
+	padding: 25px 0;
+}
+
+.bt_telecharger {
+	color: #a22755;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.bt_telecharger:active {
+	color: #ccc;
+}
+
+ /* ------------ PARTIE 2 : Images et Galeries  ---------------*/
+
+/* Image SAUT */
+
+#img_saut {
+	float: left;
+	border: 3px solid #2F2F2F;
+	position: relative;
+	height: 480px;
+}
+
+#img_saut:hover #survol {
+	display: block;
+}
+
+#survol {
+	color: #fff;
+	font-family: arial, sans-serif;
+	text-align: center;
+	background-color: rgb(100, 100, 100, 0.6);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+}
+
+#survol h1 {
+	margin-top: 180px;
+	font-size: 30px;
+}
+
+#survol p {
+	font-size: 20px;
+}
+
+#bt_sauter {
+	display: block;
+	padding: 5px 15px;
+	background-color: #0c7f06;
+	margin: 0 auto;
+	width: 150px;
+	margin-top: 25px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+#bouton_sauter:hover {
+	color: #ccc;
+}
+
+/* Galeries */
+
+#bloc_livre {
+	float: right;
+	width: 480px;
+	height: 480px;
+}
+
+.vignette_livre {
+	border: 3px solid #305a47;
+	width: 235px;
+	height: 218px;
+	float: left;
+	background-color: #ddeae4;
+	padding: 21px 0px 0px 0px;
+	text-align: center;
+}
+
+/* enlever les bordures */
+.vignette_livre:nth-child(1),
+.vignette_livre:nth-child(2) {
+	border-bottom: 0px solid #305a47;
+}
+
+.vignette_livre:nth-child(1),
+.vignette_livre:nth-child(3) {
+	border-right: 0px solid #305a47;
+}
+
+
+ /* ------------ PARTIE 3 : FORMULAIRE  ---------------*/
+
+#bloc_formulaire {
+	min-height: 400px;
+	border: 3px solid #305a47;
+	width: auto;
+	background-color: #ddeae4;
+}
+
+#formulaire {
+	width: 55%;
+	margin: 70px auto;
+	padding: 15px;
+	font: 1em arial, sans-serif;
+}
+
+#formulaire p {
+	padding: 5px 0;
+}
+
+#formulaire legend {
+	font-size: 25px;
+}
+
+#formulaire textarea {
+	color: #6D6C6C;
+}
+
+.w99 {
+	width: 99%;
+}
+
+.w48 {
+	width: 48%;
+}
+
+textarea {
+	height: 150px; 
+}
+
+.fl-l {
+	float: left;
+}
+
+.fl-r {
+	float: right;
+}
+
+.bt_envoyer {
+	padding: 5px 0px;
+	background-color: #305a47;
+	width: 100%;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+
+.bt_envoyer:hover {
+	color: #ccc;
+	background-color: #109177;
+}
+
+/* ----------------------------------------------------- */
+/*                        FOOTER                         */
+/* ----------------------------------------------------- */
+
+
+#menu-footer {
+	width: 100%;
+	height: 35px;
+	background-color: #305a47;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+
+#menu-footer ul, #menu-footer li {
+    padding: 0;
+    margin: 0;
+}
+
+#menu-footer ul {
+    display: inline;
+}
+
+#menu-footer li {
+    display: inline-block;
+    padding: 5px 0px;
+    font-size: 17px;
+}
+
+#menu-footer a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+#menu-footer a:hover {
+    color: #ccc;
+}
